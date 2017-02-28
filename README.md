@@ -1,2 +1,6 @@
-# CS373MidtermReview
-Some notes over the CS 373: Software Engineering midterm
+# **SWE Midterm Review**
+Some notes over Downing's CS373: Software Engineering midterm.
+## **Quizzes**
+
+----------
+
