@@ -1,4 +1,4 @@
-# **SWE Midterm Review**
+# **CS 373: Software Engineering Midterm Review**
 Some notes over Downing's CS373: Software Engineering midterm.
 
 The topics to be reviewed are:
