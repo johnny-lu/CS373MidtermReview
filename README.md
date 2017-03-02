@@ -93,7 +93,7 @@ print(less_than_zero)
 # Output: [-5, -4, -3, -2, -1]
 ```
  - int: In Python, if an `int` gets bigger than 8-bytes, then the variable will be an address instead of its value. 
- - float
+ - float: floating point numeric
  - frozenset: immutable, hashable set. `frozenset` is to `set` as `tuple` is to `list`.
  - range
  - set: Iterable. No duplicates. Mutable. Unordered. Unindexable. Things must be hashable (i.e. immutable objects) by default.
@@ -103,39 +103,39 @@ print(less_than_zero)
 
 #### **Operators**
 In Python, operators that does shomething should NOT return anything.
-- -
-- -=
+- `-` subtraction
+- `-=` in place subtraction
 - ()
 - []
-- **
-- **=
+- `**` exponent; `a**b` is the same as saying a to the power of b
+- `**=` in place exponent
 - `*` multiplication
 - `*=` in place multiplication
 - `//` floor division. Returns `int` unless `float` was passed. Truncates.
 - `/` true division. Always returns `float`.
 - `/=` in place true division.
-- &
-- &=
-- >>
-- >>=
-- >
-- >=
-- <<
-- <<=
-- <
-- <=
-- %
-- %=
-- ^
-- ^=
+- `&` bitwise `AND`
+- `&=` in place bitwise `AND`
+- `>>` right bitwise shift
+- `>>=` in place right bitwise shift
+- `>` greater than
+- `>=` greater or equal to
+- `<<` left bitwise shift
+- `<<=` in place left bitwise shift
+- `<` less than
+- `<=` less than or equal to
+- `%` modulo (remainder after divison)
+- `%=` in place modulo
+- `^` bitwise exclusive or (`XOR`)
+- `^=` in place bitwise exclusive or (`XOR`)
 - `+` addition
 - `+=` in place addition
-- |
-- |=
-- ~
-- and
-- not
-- or
+- `|` bitwise or
+- `|=` in place bitwise or
+- `~` bitwise complement ("flips" the bits)
+- `and` logical `AND`. If both sides are `true`, then the condition is `true`.
+- `not` logical `NOT`. Reverse logical state of its operand.
+- `or` logical `OR`. If either side is non-zero, then the condition is `true`.
 
 #### **Methods**
 ```python
