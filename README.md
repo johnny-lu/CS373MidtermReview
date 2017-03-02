@@ -10,7 +10,6 @@ The topics to be reviewed are:
  
 ## **Readings**
 ----------
-- The Circle of Life: define, estimate, choose and build. 
 - _The Open-Closed Principle_: Software entities (classes, modules, functions, etc.) should be open for **extension**, but closed for **modification**.
 - _The New Methodology_ – Agile methods are adaptive rather than predictive. Agile methods are people-oriented rather process-oriented.
 - _Continuous Integration_ – automate the build, everyone commits to the mainline every day, make your build self-testing, maintain a single-source repository. 
@@ -28,6 +27,20 @@ Some pieces of information from either quizzes or lectures I think might appear 
 - Java has (method) overloading, Python does NOT.
 - `==` is for value equality and `is` is for reference equality.
 - Calling `iter()` on an iter returns itself.
+- How to notice/handle exceptions between two functions?
+ - **return** mechanism. Return some value that indicates an error.
+ - Write to some **global variable**. In Python, you must declare that a variable is global inside the function to use it.
+ - Pass (the address) of a variable to check/write to. 
+```python
+try:
+ ...
+except E as e:
+ ...
+else: # won't run with break, continue, return and only if no exceptions were raised
+ ...
+finally: # always runs, even with break, continue, or return
+ ...
+```
 
 ## **Python**
 ----------
