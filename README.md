@@ -106,7 +106,7 @@ In Python, operators that does shomething should NOT return anything.
 - `-` subtraction
 - `-=` in place subtraction
 - `()` makes a tuple. For a tuple with a single element, need to include a comma even though there is only one value: `tup = (23,)`
-- `[]` makes a list or used for indexing. `lst = [1, 2, 3]` or `lst[0]`, respectively.
+- `[]` makes a list or used for indexing: `lst = [1, 2, 3]` or `lst[0]`, respectively.
 - `**` exponent; `a**b` is the same as saying a to the power of b
 - `**=` in place exponent
 - `*` multiplication
@@ -139,12 +139,17 @@ In Python, operators that does shomething should NOT return anything.
 
 #### **Methods**
 ```python
-__getitem__
-__init__
+def __getitem__(...):
+    
+def __init__(...):
+    
 def __iter__(self):
-    return self #returns an iterator, itself.
-__len__
-__next__
+    return self # returns an iterator, itself.
+    
+def __len__(...):
+    
+def __next__(...):
+    
 ```
 
 #### **Functions**
