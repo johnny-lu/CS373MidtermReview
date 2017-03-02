@@ -139,16 +139,24 @@ In Python, operators that does shomething should NOT return anything.
 
 #### **Methods**
 ```python
-def __getitem__(...):
+class foob:
+
+    def __init__(self, data):
+        self.data = data
+
+    def __getitem__(self, key):
+        return self.data[key]
     
-def __init__(...):
+    def __iter__(self):
+        return self # returns an iterator, itself.
     
-def __iter__(self):
-    return self # returns an iterator, itself.
+    def __len__(self):
+        return len(self.data)
     
-def __len__(...):
-    
-def __next__(...):
+    def __next__(self):
+        v = self.current
+        self.current += 1
+        return v
     
 ```
 
