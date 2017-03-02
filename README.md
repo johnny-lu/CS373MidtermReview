@@ -118,7 +118,48 @@ __len__
 __next__
 ```
 #### **Functions**
+- assert
+- except
+- functools.reduce
+- issubclass
+- iter
+- next
+- operator.add
+- operator.floordiv
+- operator.mul
+- operator.sub
+- operator.truediv
+- pass
+- print
+- raise
+- sqrt
+- sum
+- try
+- yield
+
 #### **Concepts**
+- assertions
+- classes
+- closures
+- concatenation
+- dict comprehensions
+- exceptions
+- generators
+- iterables
+- iteration
+- iterators
+- lambdas
+- list comprehensions
+- nested classes
+- nested functions
+- recursion
+- replication
+- set comprehensions
+- StopIteration
 #### **Tokens**
-
-
+- "*" in a function call
+- "*" in a parameter list
+- "**" in a function call
+- "**" in a parameter list
+- "=" in a function call
+- "=" in a parameter list
