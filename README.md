@@ -11,10 +11,13 @@ The topics to be reviewed are:
 ## **Readings**
 ----------
 The Circle of Life: define, estimate, choose and build. 
-- Software entities (classes, modules, functions, etc.) should be open for **extension**, but closed for **modification**.
+- _The Open-Closed Principle_: Software entities (classes, modules, functions, etc.) should be open for **extension**, but closed for **modification**.
 - _The New Methodology_ – Agile methods are adaptive rather than predictive. Agile methods are people-oriented rather process-oriented.
 - _Continuous Integration_ – automate the build, everyone commits to the mainline every day, make your build self-testing, maintain a single-source repository. 
 - _UML Basics_: In **composition aggregation**, the relationship between the child’s lifecycle and the parent’s lifecycle is: the child’s lifecycle is dependent on the parent’s and denoted by a filled diamond on the parent’s side.
+- _Liskov Substitution Principle_:  Functions that use references to **base classes** must be able to use objects of **derived classes** without knowing it.
+
+
 
 ## **Quizzes**
 
