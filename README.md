@@ -46,18 +46,30 @@ Everything in Python is an object.
 >>> a.imag
 -6.0
 ```
+ - list
+ - dict: Maps objects "values" to other hashable objects "keys". iterable, not indexable. unordered, no duplicate keys. mutable. not hashable
+ - tuple
+ - map: applies a function to all the items in an input_list. 
+```python
+map(function_to_apply, list_of_inputs) #example call
+items = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, items))
+# Output: [1, 4, 9, 16, 25]
+````
+ - filter: creates a list of elements for which a function returns true.
+```python
+number_list = range(-5, 5)
+less_than_zero = list(filter(lambda x: x < 0, number_list))
+print(less_than_zero)
 
- - dict
- - filter
+# Output: [-5, -4, -3, -2, -1]
+```
+ - int
  - float
  - frozenset
- - int
- - list
- - map
  - range
  - set
  - str
- - tuple
  - type
  - zip
 
