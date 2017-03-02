@@ -139,21 +139,21 @@ In Python, operators that does shomething should NOT return anything.
 
 #### **Methods**
 ```python
-class foob:
+class foob(barr): # Class foob is inherited from class barr. Similar to `extends` in Java.
 
-    def __init__(self, data):
+    def __init__(self, data): # Called immediately after an instance of the class is created. Can take any number of args, but this one takes one.
         self.data = data
 
-    def __getitem__(self, key):
+    def __getitem__(self, key): # Called when using the index `[]` syntax
         return self.data[key]
     
-    def __iter__(self):
+    def __iter__(self): # Called when the function `iter()` is called on an instance.
         return self # returns an iterator, itself.
     
-    def __len__(self):
-        return len(self.data)
+    def __len__(self): # Called when the function `len()` is called on an instance. 
+        return len(self.data) # Returns the length of the data.
     
-    def __next__(self):
+    def __next__(self): # Called when the function next() is called on an instance. Retrieves the next item.
         v = self.current
         self.current += 1
         return v
