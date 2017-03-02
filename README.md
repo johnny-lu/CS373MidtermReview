@@ -181,7 +181,7 @@ class foob(barr): # Class foob is inherited from class barr. Similar to `extends
 - yield
 
 #### **Concepts**
-- assertions
+- assertions: should _not_ be used to test for failure cases that can occur because of bad user input. Good for catching false assumptions that were made while writing the code or can act as in-line documentation.
 - classes
 - closures
 - concatenation
@@ -202,7 +202,17 @@ def f (bf, x, y, z) :
 
 assert f(lambda x, y : x + y, 2, 3, 4) == 35 # (2+3) * (3+4)
 ```
-- list comprehensions
+- list comprehensions: Python's way of implementing a well-known notation for sets as used by mathematicians. Consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses. The expressions can be anything. Starts and ends with `[]` because it will return a list.
+```python
+# List comprehensions follows this syntax: *result*  = [*transform*    *iteration*     *filter*]
+#                                          new_list  = [double(x)  for x in range(10) if x%2==0]
+
+new_list = []
+for x in range(10): #same as above
+    if (x%2==0):
+        new_list.append(double(x))
+assert new_list == [0, 4, 8, 12, 16]
+```
 - nested classes
 - nested functions
 - recursion
