@@ -202,7 +202,7 @@ def f (bf, x, y, z) :
 
 assert f(lambda x, y : x + y, 2, 3, 4) == 35 # (2+3) * (3+4)
 ```
-- list comprehensions: Python's way of implementing a well-known notation for sets as used by mathematicians. Consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses. The expressions can be anything. Starts and ends with `[]` because it will return a list.
+- list comprehensions: Python's way of implementing a well-known notation for sets as used by mathematicians. Consists of `[]` containing an expression followed by a for clause, then zero or more for or if clauses. The expressions can be anything. Starts and ends with `[]` because it will return a list.
 ```python
 # List comprehensions follows this syntax: *result*  = [*transform*    *iteration*     *filter*]
 #                                          new_list  = [double(x)  for x in range(10) if x%2==0]
@@ -213,11 +213,33 @@ for x in range(10): #same as above
         new_list.append(double(x))
 assert new_list == [0, 4, 8, 12, 16]
 ```
-- nested classes
+- nested classes:
+```python
+class Account:
+    def __init__(self, balance):
+        self.bank = self.Bank(balance)
+
+    class Bank: # Inner class
+        def __init__(self, balance):
+            self.balance = balance
+
+        def withdraw(self, amount):
+            self.balance -= amount
+
+        def deposit(self, amount):
+            self.balance += amount
+
+a = Account(10000)
+print(a.bank.balance) # 10000
+```
 - nested functions
 - recursion
 - replication
-- set comprehensions
+- set comprehensions: similar to list comprehensions above, except it is inside `{}` to return a set.
+```python
+my_set = {x*2 for x in range(10) if x%2==0}
+assert my_set == {0, 4, 8, 12, 16}
+```
 - StopIteration
 
 #### **Tokens**
