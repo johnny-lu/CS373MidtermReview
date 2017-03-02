@@ -4,24 +4,30 @@ Some notes over Downing's CS373: Software Engineering midterm.
 The topics to be reviewed are:
 
  - [Readings](#readings)
- - [Quizzes](#quizzes)
+ - [Quizzes/Lectures](#quizzeslectures)
  - [Python](#python)
  
  
 ## **Readings**
 ----------
-The Circle of Life: define, estimate, choose and build. 
+- The Circle of Life: define, estimate, choose and build. 
 - _The Open-Closed Principle_: Software entities (classes, modules, functions, etc.) should be open for **extension**, but closed for **modification**.
 - _The New Methodology_ – Agile methods are adaptive rather than predictive. Agile methods are people-oriented rather process-oriented.
 - _Continuous Integration_ – automate the build, everyone commits to the mainline every day, make your build self-testing, maintain a single-source repository. 
 - _UML Basics_: In **composition aggregation**, the relationship between the child’s lifecycle and the parent’s lifecycle is: the child’s lifecycle is dependent on the parent’s and denoted by a filled diamond on the parent’s side.
 - _Liskov Substitution Principle_:  Functions that use references to **base classes** must be able to use objects of **derived classes** without knowing it.
+- _Extreme Programming_ – discard independent work and rewrite it.
 
 
 
-## **Quizzes**
-
+## **Quizzes/Lectures**
 ----------
+Some pieces of information from either quizzes or lectures I think might appear on the test.
+- Eager cache – stores (cycle length) during the run before the first read.
+- Unit tests = white box, Acceptance tests = black box
+- Java has (method) overloading, Python does NOT.
+- `==` is for value equality and `is` is for reference equality.
+- Calling `iter()` on an iter returns itself.
 
 ## **Python**
 ----------
