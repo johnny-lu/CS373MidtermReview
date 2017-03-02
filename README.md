@@ -31,6 +31,7 @@ Some pieces of information from either quizzes or lectures I think might appear 
  - **return** mechanism. Return some value that indicates an error.
  - Write to some **global variable**. In Python, you must declare that a variable is global inside the function to use it.
  - Pass (the address) of a variable to check/write to. 
+ - All of Python's immutable built-in objects are hashable, while no mutable containers (such as lists or dictionaries) are.
 ```python
 try:
  ...
@@ -41,6 +42,8 @@ else: # won't run with break, continue, return and only if no exceptions were ra
 finally: # always runs, even with break, continue, or return
  ...
 ```
+- l-values are on the left hand side, but can be on either. r-values can only be on the right side. One way of thinking about it is: l-values are objects that persist whereas r-values do not after the expression.
+- When you put a list into a tuple, you are putting its address in the tuple. You can still modify the original list, and tuple would be fine with that.
 
 ## **Python**
 ----------
@@ -70,9 +73,9 @@ Everything in Python is an object.
 >>> a.imag
 -6.0
 ```
- - list
- - dict: Maps objects "values" to other hashable objects "keys". iterable, not indexable. unordered, no duplicate keys. mutable. not hashable
- - tuple
+ - list: Constructor needs an iterable (over anything).
+ - dict: Maps objects "values" to other hashable objects "keys". iterable, not indexable. unordered, no duplicate keys. mutable. not hashable. Constructor needs an iterable (over iterable).
+ - tuple: Constructor needs an iterable (over anything). Immutable. Because `tuple` is immutable, calling `copy()` on one returns the address of the same `tuple`.
  - map: applies a function to all the items in an input_list. 
 ```python
 map(function_to_apply, list_of_inputs) #example call
@@ -88,27 +91,28 @@ print(less_than_zero)
 
 # Output: [-5, -4, -3, -2, -1]
 ```
- - int
+ - int: In Python, if an `int` gets bigger than 8-bytes, then the variable will be an address instead of its value. 
  - float
- - frozenset
+ - frozenset: immutable, hashable set. `frozenset` is to `set` as `tuple` is to `list`.
  - range
- - set
- - str
+ - set: Iterable. No duplicates. Mutable. Unordered. Unindexable. Things must be hashable (i.e. immutable objects) by default.
+ - str: Constructor needs an iterable (over strings). Immutable.
  - type
  - zip
 
 #### **Operators**
+In Python, operators that does shomething should NOT return anything.
 - -
 - -=
 - ()
 - []
 - **
 - **=
-- *
-- *=
-- //
-- /
-- /=
+- `*` multiplication
+- `*=` in place multiplication
+- `//` floor division. Returns `int` unless `float` was passed. Truncates.
+- `/` true division. Always returns `float`.
+- `/=` in place true division.
 - &
 - &=
 - >>
@@ -123,8 +127,8 @@ print(less_than_zero)
 - %=
 - ^
 - ^=
-- +
-- +=
+- `+` addition
+- `+=` in place addition
 - |
 - |=
 - ~
