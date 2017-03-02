@@ -105,8 +105,8 @@ print(less_than_zero)
 In Python, operators that does shomething should NOT return anything.
 - `-` subtraction
 - `-=` in place subtraction
-- ()
-- []
+- `()` makes a tuple. For a tuple with a single element, need to include a comma even though there is only one value: `tup = (23,)`
+- `[]` makes a list or used for indexing. `lst = [1, 2, 3]` or `lst[0]`, respectively.
 - `**` exponent; `a**b` is the same as saying a to the power of b
 - `**=` in place exponent
 - `*` multiplication
