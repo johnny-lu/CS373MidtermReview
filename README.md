@@ -59,6 +59,7 @@ finally: # always runs, even with break, continue, or return
 #### **Types**
 Everything in Python is an object.
 
+`i += j` is the same as `i = i + j` if `i` is an immutable type (e.g. `tuple`, `int`, ... but not `list`) AND `j` is the same type as `i`.
  - bool: `True` or `False`. Conditional expressions will accept values of any type, treating special ones like boolean `False`, integer 0 and the empty string `""` as equivalent to False, and all other values as equivalent to True.
  - complex: A complex number is a number of the form `A+Bi` where `i` is the imaginary number, equal to the square root of -1. In Python, a number followed by “j” is treated as an imaginary number. Python displays complex numbers in parentheses when they have a nonzero real part. Unlike Python's other numeric types, complex numbers are made of two parts: the real part and the imaginary part, both of which are represented internally as float values. You can retrieve the two components using `c.real` or `c.imag`.
  
@@ -173,7 +174,7 @@ __next__
 - concatenation
 - dict comprehensions
 - exceptions
-- generators
+- generators: are iterators.
 - iterables
 - iteration
 - iterators
@@ -197,9 +198,9 @@ assert f(lambda x, y : x + y, 2, 3, 4) == 35 # (2+3) * (3+4)
 - StopIteration
 
 #### **Tokens**
-- "*" in a function call
-- "*" in a parameter list
-- "**" in a function call
-- "**" in a parameter list
-- "=" in a function call
-- "=" in a parameter list
+- `*` in a function call unpacks an iterable. Can only do one per call. Must be used before the `**` unpacker. 
+- `*` in a parameter list - every parameter that follows it must be called by name.
+- `**` in a function call unpacks a dictionary. Can only do one per call. Must be used after the `*` unpacker. 
+- `**` in a parameter list is used to take a variable number of arguments. 
+- `=` in a function call used to pass keyword arguments (aka call by name). Why? Easier to read (and know what the function is asking for). Must be in the trailing set. Makes code more "brittle" because if the args names are changed, old calls to it passing keyword args have to change, too.
+- `=` in a parameter list used to set default values in a function. Must be in the trailing set. If the defaults are not immutable, Python will store the mutable object somewhere and use it the next time you call the function without passing it a keyword arg.
