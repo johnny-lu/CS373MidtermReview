@@ -117,6 +117,7 @@ def __iter__(self):
 __len__
 __next__
 ```
+
 #### **Functions**
 - assert
 - except
@@ -148,7 +149,17 @@ __next__
 - iterables
 - iteration
 - iterators
-- lambdas
+- lambdas: One line functions. Good for when you don’t want to use a function twice in a program.  
+```python
+lambda argument: manipulate(argument) #blueprint
+add = lambda x, y: x + y
+print(add(3, 5)) # Output: 8
+
+def f (bf, x, y, z) :
+    return bf(x, y) * bf(y, z)
+
+assert f(lambda x, y : x + y, 2, 3, 4) == 35 # (2+3) * (3+4)
+```
 - list comprehensions
 - nested classes
 - nested functions
@@ -156,6 +167,7 @@ __next__
 - replication
 - set comprehensions
 - StopIteration
+
 #### **Tokens**
 - "*" in a function call
 - "*" in a parameter list
